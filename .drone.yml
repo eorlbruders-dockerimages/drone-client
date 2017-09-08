@@ -28,3 +28,11 @@ pipeline:
       status:
       - failure
       - changed
+    trigger:
+      fork: true
+      image: plugins/downstream
+      repositories:
+      - eorlbruders-dockerimages/drone-start-build
+      secrets:
+      - downstream_token
+      server: https://drone.eorlbruder.de
